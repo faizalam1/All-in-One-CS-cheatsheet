@@ -1,0 +1,2564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Python</title>
+	<meta name='Generator' content='Zim 0.72.0'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+	</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class='header'>
+	[ <span class='insen'>Prev</span> ]
+
+	[ <span class='insen'>Index</span> ]
+
+	[ <span class='insen'>Next</span> ]
+</div>
+
+<hr />
+
+<!-- Wiki content -->
+
+<div class='pages'>
+	<div class='heading'>
+	<h1>Notes of CS <a name='CS notes'></a></h1>
+	</div>
+
+	<div class='content'>
+	<h2>Linux:</h2>
+
+<p>
+<b>"Everything Is a File."</b><br>
+<b>"With great power comes great responsibility" Sudo</b>
+</p>
+
+<h5>Distribution:         Debian</h5>
+
+<br>
+
+<h5>Shell:                     BASH(Bourne Again SHell)</h5>
+
+<br>
+
+<h5>GUI Text Editor:    Gedit</h5>
+
+<br>
+
+<h5>CLI Text Editor:     Nano</h5>
+
+<br>
+
+<h3>Filesystem:</h3>
+
+<br>
+
+<p>
+<div style='padding-left: 120pt'>
+   <img src="./computerScience_files/CS_notes/pasted_image.png">
+</div>
+<div style='padding-left: 510pt'>
+  <img src="./computerScience_files/CS_notes/pasted_image001.png">
+</div>
+<div style='padding-left: 360pt'>
+  <img src="./computerScience_files/CS_notes/pasted_image002.png"> 
+</div>
+</p>
+
+<br>
+
+<h3>BASH:</h3>
+
+<p>
+<div style='padding-left: 150pt'>
+ <img src="./computerScience_files/CS_notes/pasted_image003.png"><img src="./computerScience_files/CS_notes/pasted_image006.png">
+</div>
+</p>
+
+<br>
+
+<h3>Package Manager:</h3>
+
+<p>
+<div style='padding-left: 120pt'>
+  <img src="./computerScience_files/CS_notes/pasted_image007.png">
+</div>
+</p>
+
+<br>
+
+<h3>CLI Text Editor:</h3>
+
+<br>
+
+<h4>Nano:</h4>
+
+<p>
+<div style='padding-left: 60pt'>
+   <img src="./computerScience_files/CS_notes/pasted_image008.png">
+</div>
+</p>
+
+<br>
+
+<h4>VIM:</h4>
+
+<p>
+<img src="./computerScience_files/CS_notes/pasted_image010.png">
+</p>
+
+<h2>Code Editors/IDEs:</h2>
+
+<br>
+
+<h3>VS Code:</h3>
+
+<p>
+<div style='padding-left: 90pt'>
+  <img src="./computerScience_files/CS_notes/pasted_image011.png">
+</div>
+</p>
+
+<p>
+<div style='padding-left: 150pt'>
+<a href="#CS notes:Setup VS Code" title="+Setup VS Code" class="page">+Setup VS Code</a>
+</div>
+<div style='padding-left: 180pt'>
+<a href="https://code.visualstudio.com/docs" title="https://code.visualstudio.com/docs" class="https">https://code.visualstudio.com/docs</a>
+</div>
+</p>
+
+<br>
+
+<h3>Jupyter-Notebook:</h3>
+
+<p>
+<div style='padding-left: 60pt'>
+ <img src="./computerScience_files/CS_notes/pasted_image012.png">
+</div>
+<div style='padding-left: 90pt'>
+ <a href="#CS notes:Beginners Jupyter Notebook Tutorial" title="+Beginners Jupyter Notebook Tutorial" class="page">+Beginners Jupyter Notebook Tutorial</a><br>
+ <a href="#CS notes:Advance Jupyter Notebook Tutorial" title="+Advance Jupyter Notebook Tutorial" class="page">+Advance Jupyter Notebook Tutorial</a><br>
+<a href="https://jupyter.org/documentation" title="https://jupyter.org/documentation" class="https">https://jupyter.org/documentation</a>
+</div>
+</p>
+
+<br>
+
+<h3>Git:</h3>
+
+<p>
+<div style='padding-left: 30pt'>
+ <img src="./computerScience_files/CS_notes/pasted_image022.png">
+</div>
+<img src="./computerScience_files/CS_notes/pasted_image023.png"><br>
+<a href="https://git-scm.com/docs" title="https://git-scm.com/docs" class="https">https://git-scm.com/docs</a>
+</p>
+
+<h2>Programming:</h2>
+
+<br>
+
+<h2>Python:</h2>
+
+<p>
+ <img src="./computerScience_files/CS_notes/pasted_image020.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image017.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image016.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image018.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image014.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image019.png"><br>
+<a href="https://docs.python.org/3/" title="https://docs.python.org/3/" class="https">https://docs.python.org/3/</a>
+</p>
+
+<h3>Numpy:</h3>
+
+<p>
+<img src="./computerScience_files/CS_notes/pasted_image021.png"> <br>
+<div style='padding-left: 30pt'>
+   <a href="https://docs.scipy.org/doc/numpy/user/" title="https://docs.scipy.org/doc/numpy/user/" class="https">https://docs.scipy.org/doc/numpy/user/</a>
+</div>
+</p>
+
+<h3>C/C++:</h3>
+
+<br>
+
+<p>
+<a href="file:///root/Downloads/ashlyn-black_c-reference.pdf" title="~/Downloads/ashlyn-black_c-reference.pdf" class="file">~/Downloads/ashlyn-black_c-reference.pdf</a><br>
+<img src="./computerScience_files/CS_notes/pasted_image024.png"><br>
+<a href="https://www.tutorialspoint.com/cprogramming/index.htm" title="https://www.tutorialspoint.com/cprogramming/index.htm" class="https">https://www.tutorialspoint.com/cprogramming/index.htm</a><br>
+<a href="https://www.learn-c.org" title="https://www.learn-c.org" class="https">https://www.learn-c.org</a><br>
+<a href="https://www.programiz.com/c-programming" title="https://www.programiz.com/c-programming" class="https">https://www.programiz.com/c-programming</a>
+</p>
+
+<p>
+<img src="./computerScience_files/CS_notes/pasted_image026.png"><br>
+<a href="http://www.cplusplus.com/doc/tutorial/" title="http://www.cplusplus.com/doc/tutorial/" class="http">http://www.cplusplus.com/doc/tutorial/</a>
+</p>
+
+<h3>JAVA:</h3>
+
+<p>
+<a href="https://introcs.cs.princeton.edu/java/11cheatsheet/" title="https://introcs.cs.princeton.edu/java/11cheatsheet/" class="https">https://introcs.cs.princeton.edu/java/11cheatsheet/</a><br>
+<a href="https://docs.oracle.com/en/java/" title="https://docs.oracle.com/en/java/" class="https">https://docs.oracle.com/en/java/</a>
+</p>
+
+<br>
+
+<h2>Web Programming:</h2>
+
+<p>
+<a href="https://www.w3schools.com" title="https://www.w3schools.com" class="https">https://www.w3schools.com</a>
+</p>
+
+<h3>HTML5:</h3>
+
+<p>
+<img src="./computerScience_files/CS_notes/pasted_image028.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image029.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image030.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image031.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image032.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image033.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image034.png"><br>
+<div style='padding-left: 30pt'>
+<a href="https://www.w3schools.com/html/default.asp" title="https://www.w3schools.com/html/default.asp" class="https">https://www.w3schools.com/html/default.asp</a>
+</div>
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h3>CSS3:</h3>
+
+<p>
+<div style='padding-left: 30pt'>
+ <img src="./computerScience_files/CS_notes/pasted_image027.png">
+</div>
+<a href="https://www.w3schools.com/css/default.asp" title="https://www.w3schools.com/css/default.asp" class="https">https://www.w3schools.com/css/default.asp</a><br>
+<a href="https://www.w3schools.com/w3css/default.asp" title="https://www.w3schools.com/w3css/default.asp" class="https">https://www.w3schools.com/w3css/default.asp</a>
+</p>
+
+<h3>JavaScript(Nothing to do with JAVA):</h3>
+
+<p>
+<div style='padding-left: 30pt'>
+<a href="https://htmlcheatsheet.com/js/" title="https://htmlcheatsheet.com/js/" class="https">https://htmlcheatsheet.com/js/</a><br>
+<a href="https://www.w3schools.com/js/default.asp" title="https://www.w3schools.com/js/default.asp" class="https">https://www.w3schools.com/js/default.asp</a><br>
+<a href="https://www.w3schools.com/jquery/default.asp" title="https://www.w3schools.com/jquery/default.asp" class="https">https://www.w3schools.com/jquery/default.asp</a><br>
+<a href="https://www.w3schools.com/bootstrap4/default.asp" title="https://www.w3schools.com/bootstrap4/default.asp" class="https">https://www.w3schools.com/bootstrap4/default.asp</a><br>
+<a href="https://www.w3schools.com/react/default.asp" title="https://www.w3schools.com/react/default.asp" class="https">https://www.w3schools.com/react/default.asp</a><br>
+<a href="https://www.w3schools.com/angular/default.asp" title="https://www.w3schools.com/angular/default.asp" class="https">https://www.w3schools.com/angular/default.asp</a><br>
+<a href="https://www.w3schools.com/js/js_json_intro.asp" title="https://www.w3schools.com/js/js_json_intro.asp" class="https">https://www.w3schools.com/js/js_json_intro.asp</a><br>
+<a href="https://www.w3schools.com/js/js_ajax_intro.asp" title="https://www.w3schools.com/js/js_ajax_intro.asp" class="https">https://www.w3schools.com/js/js_ajax_intro.asp</a><br>
+<a href="https://www.w3schools.com/w3js/default.asp" title="https://www.w3schools.com/w3js/default.asp" class="https">https://www.w3schools.com/w3js/default.asp</a>
+</div>
+</p>
+
+<h3>PHP (Don't Learn it. It is here for its historical importance):</h3>
+
+<p>
+<div style='padding-left: 30pt'>
+ <a href="https://www.w3schools.com/php/default.asp" title="https://www.w3schools.com/php/default.asp" class="https">https://www.w3schools.com/php/default.asp</a>
+</div>
+</p>
+
+<h3>SQL:</h3>
+
+<p>
+<div style='padding-left: 30pt'>
+ <img src="./computerScience_files/CS_notes/pasted_image035.png"><br>
+  <a href="https://www.w3schools.com/sql/default.asp" title="https://www.w3schools.com/sql/default.asp" class="https">https://www.w3schools.com/sql/default.asp</a>
+</div>
+</p>
+
+<h3>ASP:</h3>
+
+<p>
+<a href="https://www.w3schools.com/asp/default.asp" title="https://www.w3schools.com/asp/default.asp" class="https">https://www.w3schools.com/asp/default.asp</a>
+</p>
+
+<h2>Networking:</h2>
+
+<p>
+<a href="https://packetlife.net/library/cheat-sheets/" title="https://packetlife.net/library/cheat-sheets/" class="https">https://packetlife.net/library/cheat-sheets/</a><br>
+<a href="https://www.pdfdrive.com/networking-all-in-one-for-dummies-7th-edition-d145172091.html" title="https://www.pdfdrive.com/networking-all-in-one-for-dummies-7th-edition-d145172091.html" class="https">https://www.pdfdrive.com/networking-all-in-one-for-dummies-7th-edition-d145172091.html</a><br>
+<img src="./computerScience_files/CS_notes/pasted_image036.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image038.png"><br>
+<img src="./computerScience_files/CS_notes/pasted_image037.png">
+</p>
+
+<h2>Data Structures And Algorithms 2 Mins Review</h2>
+
+<br>
+
+<h5>by Stephen Gou</h5>
+
+<br>
+
+<p>
+Runtime refers to average runtime.
+</p>
+
+<h3>Data Structures</h3>
+
+<br>
+
+<h4>1 Dynamic Array</h4>
+
+<br>
+
+<p>
+Sequentially stored data in a continuous chunk of memory. Double current capacity whenever capacity reached. When increasing capacity, it allocates new chunk of memory and copy over the previous values to new location.
+</p>
+
+<h5>Runtime</h5>
+
+<br>
+
+<p>
+indexing: O(1)
+</p>
+
+<p>
+searching: O(n)
+</p>
+
+<p>
+insertion: O(n) Note: O(1) Amortized
+</p>
+
+<p>
+deletion: O(n)
+</p>
+
+<h3>2 Linked List</h3>
+
+<p>
+Most commonly refers to singly linked list. Data stored in nodes where each node has a reference to the next node. There are doubly linked list and circular linked list as well.
+</p>
+
+<h5>Runtime</h5>
+
+<br>
+
+<p>
+indexing: O(n)
+</p>
+
+<p>
+searching: O(n)
+</p>
+
+<p>
+insertion: O(1)
+</p>
+
+<p>
+deletion: O(1)
+</p>
+
+<p>
+Stack and queue are often implemented with linked list because linked list are most performant for insertion/deletion, which are the most frequently used operations for stacks/queues.
+</p>
+
+<h5>Stack Last in First Out (LIFO)</h5>
+
+<br>
+
+<h5>Queue First in First Out (FIFO)</h5>
+
+<br>
+
+<h3>3 Hash Table (Hash Map)</h3>
+
+<p>
+A usually unordered data structure that maps keys to values. A hash (preferably unique) is computed for a given key and its value will be stored in the corresponding bins or index according to the hash. Internally the bins can be an array. Collision can happen when multiple keys are mapped to the same hash. Common resolution is to store a list/linked-list at each bin/index location (called chaining).
+</p>
+
+<h5>Runtime</h5>
+
+<br>
+
+<p>
+value lookup: O(1)
+</p>
+
+<p>
+insertion: O(1)
+</p>
+
+<p>
+deletion: O(1)
+</p>
+
+<h3>4 Binary Search Tree (BST)</h3>
+
+<p>
+A binary tree with extra condition that each node is greater than or equal to all nodes in left sub-tree, and smaller than or equal to all nodes in right sub-tree.
+</p>
+
+<h5>Runtime</h5>
+
+<br>
+
+<p>
+searching: O(log\ n)
+</p>
+
+<p>
+insertion: O(log\ n)
+</p>
+
+<p>
+deletion: O(log\ n)
+</p>
+
+<h3>5 Heap (Max Heap/Min Heap)</h3>
+
+<p>
+A binary tree with the condition that parent node's value is bigger/smaller than its children. So root is the maximum in a max heap and minimum in min heap. Priority queue is also referred to as heap because it's usually implemented by a heap.
+</p>
+
+<h5>Runtime</h5>
+
+<br>
+
+<p>
+min/max: O(1)
+</p>
+
+<p>
+insertion: O(log\ n)
+</p>
+
+<p>
+deletion: O(log\ n)
+</p>
+
+<h2>Algorithms</h2>
+
+<br>
+
+<h3>1 Sorting</h3>
+
+<br>
+
+<h4>Bubble Sort</h4>
+
+<br>
+
+<p>
+Iterate through entire list while comparing pairs and swap positions based on their values until all elements sorted.
+</p>
+
+<p>
+O(n^2) but fast if list is almost sorted.
+</p>
+
+<h4>Insertion Sort</h4>
+
+<br>
+
+<p>
+Iterates through unsorted list while building a sorted list. For each value encountered in unsorted list, find appropriate place in sorted list and insert it.
+</p>
+
+<p>
+O(n^2)
+</p>
+
+<h4>Merge Sort</h4>
+
+<br>
+
+<p>
+A type of divide and conquer algorithm: 1) divides the list into two equally sized sub lists 2) sort each sub list 3) merge two sorted lists into final list.
+</p>
+
+<p>
+O(n log n) - needs to divide log n times, and for each divide, it needs to go through all n items to merge, thus  n times log n.
+</p>
+
+<h4>Heap Sort</h4>
+
+<br>
+
+<p>
+1) Build a heap (min or max) from the unsorted list 2)repeatedly remove the root node from the heap and put into the sorted list.
+</p>
+
+<p>
+O(n log n) - remove root node is O(log n), and has to be repeated for each node, thus  n times log n.
+</p>
+
+<h4>Quick Sort</h4>
+
+<br>
+
+<p>
+A type of divide and conquer algorithm: 1) pick an item in the unsorted list as pivot 2) divided list into 2 sub lists, one contains elements smaller than pivot while the other contains elements greater than the pivot 3) sort the sub lists, and combine the results into final list.
+</p>
+
+<p>
+O(n log n) - need to divide O(log n) times, and after each divide, the partioning has to go through all elements, thus overall runtime n times log n.
+</p>
+
+<h3>2 Searching</h3>
+
+<br>
+
+<h4>Linear Search</h4>
+
+<p>
+O(n)
+</p>
+
+<h4>Binary Search</h4>
+
+<p>
+O(log n)
+</p>
+
+<h4>Breadth-First-Search (BFS)</h4>
+
+<p>
+ Siblings first then children. Use queue usually.
+</p>
+
+<h4>Depth-First-Search (DFS)</h4>
+
+<p>
+ Children first then siblings. Use stack usually.
+</p>
+
+<p>
+A* Search Goal is to find the shortest path between 2 nodes in a graph. It's a best-first search. At each iteration it finds the next node to extend the path based on the criteria g(next) + h(next) where g is the distance from next node to starting node and h is the heuristic (estimated) distance of next node to final node. use a heap usually.
+</p>
+
+<h3>3 Tree Traversals</h3>
+
+<br>
+
+<h4>Inorder (Left, Root, Right):</h4>
+
+<p>
+ useful for getting sorted list out of BST
+</p>
+
+<h4>Preorder (Root, Left, Right) :</h4>
+
+<p>
+useful for making copy of binary trees, or evaluate expression trees.
+</p>
+
+<h4>Postorder (Left, Right, Root):</h4>
+
+<p>
+useful for deleting trees (because need to delete children before deleting parent)
+</p>
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image.png'>pasted_image.png</a></td><td>&nbsp;</td><td>95.0kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image001.png'>pasted_image001.png</a></td><td>&nbsp;</td><td>379kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image002.png'>pasted_image002.png</a></td><td>&nbsp;</td><td>300kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image003.png'>pasted_image003.png</a></td><td>&nbsp;</td><td>336kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image004.png'>pasted_image004.png</a></td><td>&nbsp;</td><td>8.29Mb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image005.png'>pasted_image005.png</a></td><td>&nbsp;</td><td>8.29Mb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image006.png'>pasted_image006.png</a></td><td>&nbsp;</td><td>8.29Mb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image007.png'>pasted_image007.png</a></td><td>&nbsp;</td><td>48.7kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image008.png'>pasted_image008.png</a></td><td>&nbsp;</td><td>270kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image009.png'>pasted_image009.png</a></td><td>&nbsp;</td><td>413kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image010.png'>pasted_image010.png</a></td><td>&nbsp;</td><td>596kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image011.png'>pasted_image011.png</a></td><td>&nbsp;</td><td>1.10Mb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image012.png'>pasted_image012.png</a></td><td>&nbsp;</td><td>655kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image013.png'>pasted_image013.png</a></td><td>&nbsp;</td><td>100kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image014.png'>pasted_image014.png</a></td><td>&nbsp;</td><td>897kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image015.png'>pasted_image015.png</a></td><td>&nbsp;</td><td>318kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image016.png'>pasted_image016.png</a></td><td>&nbsp;</td><td>318kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image017.png'>pasted_image017.png</a></td><td>&nbsp;</td><td>965kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image018.png'>pasted_image018.png</a></td><td>&nbsp;</td><td>888kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image019.png'>pasted_image019.png</a></td><td>&nbsp;</td><td>271kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image020.png'>pasted_image020.png</a></td><td>&nbsp;</td><td>454kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image021.png'>pasted_image021.png</a></td><td>&nbsp;</td><td>4.19Mb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image022.png'>pasted_image022.png</a></td><td>&nbsp;</td><td>876kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image023.png'>pasted_image023.png</a></td><td>&nbsp;</td><td>159kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image024.png'>pasted_image024.png</a></td><td>&nbsp;</td><td>666kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image025.png'>pasted_image025.png</a></td><td>&nbsp;</td><td>53.8kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image026.png'>pasted_image026.png</a></td><td>&nbsp;</td><td>377kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image027.png'>pasted_image027.png</a></td><td>&nbsp;</td><td>1.98Mb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image028.png'>pasted_image028.png</a></td><td>&nbsp;</td><td>861kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image029.png'>pasted_image029.png</a></td><td>&nbsp;</td><td>793kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image030.png'>pasted_image030.png</a></td><td>&nbsp;</td><td>713kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image031.png'>pasted_image031.png</a></td><td>&nbsp;</td><td>658kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image032.png'>pasted_image032.png</a></td><td>&nbsp;</td><td>752kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image033.png'>pasted_image033.png</a></td><td>&nbsp;</td><td>623kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image034.png'>pasted_image034.png</a></td><td>&nbsp;</td><td>795kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image035.png'>pasted_image035.png</a></td><td>&nbsp;</td><td>481kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image036.png'>pasted_image036.png</a></td><td>&nbsp;</td><td>516kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image037.png'>pasted_image037.png</a></td><td>&nbsp;</td><td>417kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/pasted_image038.png'>pasted_image038.png</a></td><td>&nbsp;</td><td>30.0kb</td></tr>
+
+			</table>
+	</div>
+
+	<hr />
+
+	<div class='heading'>
+	<h1>Advance Jupyter Notebook Tutorial <a name='CS notes:Advance Jupyter Notebook Tutorial'></a></h1>
+	</div>
+
+	<div class='content'>
+	<h2>Tutorial: Advanced Jupyter Notebooks</h2>
+
+<p>
+Lying at the heart of modern data science and analysis is the Jupyter project lifecycle. Whether you’re rapidly prototyping ideas, demonstrating your work, or producing fully fledged reports, notebooks can provide an efficient edge over IDEs or traditional desktop applications.
+</p>
+
+<p>
+This will involve:
+</p>
+
+<p>
+<ul>
+<li>Warming up with the basics of shell commands and some handy magics, including a look at debugging, timing, and executing multiple languages.</li>
+<li>Exploring topics like logging, macros, running external code, and Jupyter extensions.</li>
+<li>Seeing how to enhance charts with Seaborn, beautify notebooks with themes and CSS, and customise notebook output.</li>
+<li>Finishing off with a deep look at topics like scripted execution, automated reporting pipelines, and working with databases.</li>
+</ul>
+</p>
+
+<p>
+Now we’re ready to become Jupyter wizards!
+</p>
+
+<h3>Shell Commands</h3>
+
+<p>
+Every user will benefit at least from time-to-time from the ability to interact directly with the operating system from within their notebook. Any line in a code cell that you begin with an exclamation mark will be executed as a shell command. This can be useful when dealing with datasets or other files, and managing your Python packages. As a simple illustration:
+</p>
+
+<p>
+!echo Hello World!!<br>
+pip freeze | grep pandas
+</p>
+
+<p>
+Hello World!<br>
+pandas==0.23.4<br>
+It is also possible to use Python variables in your shell commands by prepending a $ symbol consistent with bash style variable names.
+</p>
+
+<br>
+
+<p>
+message = 'This is nifty'<br>
+!echo $message
+</p>
+
+<p>
+This is nifty<br>
+Note that the shell in which ! commands are executed is discarded after execution completes, so commands like cd will have no effect. However, IPython magics offer a solution.
+</p>
+
+<h3>Basic Magics</h3>
+
+<p>
+Magics are handy commands built into the IPython kernel that make it easier to perform particular tasks. Although they often resemble unix commands, under the hood they are all implemented in Python. There exist far more magics than it would make sense to cover here, but it’s worth highlighting a variety of examples. We will start with a few basics before moving on to more interesting cases.
+</p>
+
+<p>
+There are two categories of magic: line magics and cell magics. Respectively, they act on a single line or can be spread across multiple lines or entire cells. To see the available magics, you can do the following:
+</p>
+
+<p>
+%lsmagic<br>
+Available line magics:
+</p>
+
+<p>
+Available cell magics:%%! %%HTML %%SVG %%bash %%capture %%cmd %%debug %%file %%html %%javascript %%js %%latex %%markdown %%perl %%prun %%pypy %%python %%python2 %%python3 %%ruby %%script %%sh %%svg %%sx %%system %%time %%timeit %%writefile<br>
+Automagic is ON, % prefix IS NOT needed for line magics.<br>
+As you can see, there are loads! Most are listed in the official documentation, which is intended as a reference but can be somewhat obtuse in places. Line magics start with a percent character %, and cell magics start with two, %%.
+</p>
+
+<p>
+It’s worth noting that ! is really just a fancy magic syntax for shell commands, and as you may have noticed IPython provides magics in place of those shell commands that alter the state of the shell and are thus lost by !. Examples include %cd, %alias and %env.
+</p>
+
+<p>
+Let’s go through some more examples.
+</p>
+
+<h5>Autosaving</h5>
+
+<p>
+First up, the %autosave magic let’s you change how often your notebook will autosave to its checkpoint file.
+</p>
+
+<p>
+%autosave 60<br>
+Autosaving every 60 seconds<br>
+It’s that easy!
+</p>
+
+<h5>Displaying Matplotlib Plots</h5>
+
+<p>
+One of the most common line magics for data scientists is surely %matplotlib, which is of course for use with the most popular plotting libary for Python, Matplotlib.
+</p>
+
+<p>
+%matplotlib inline<br>
+Providing the inline argument instructs IPython to show Matplotlib plot images inline, within your cell outputs, enabling you to include charts inside your notebooks. Be sure to include this magic before you import Matplotlib, as it may not work if you do not; many import it at the start of their notebook, in the first code cell.
+</p>
+
+<p>
+Now, let’s start looking at some more complex features.
+</p>
+
+<h5>Debugging</h5>
+
+<p>
+The more experienced reader may have had concerns over the ultimate efficacy of Jupyter Notebooks without access to a debugger. But fear not! The IPython kernel has its own interface to the Python debugger, pdb, and several options for debugging with it in your notebooks. Executing the %pdb line magic will toggle on/off the automatic triggering of pdb on error across all cells in your notebook.
+</p>
+
+<br>
+<br>
+
+<p>
+raise NotImplementedError()
+</p>
+
+<p>
+Automatic pdb calling has been turned ON
+</p>
+
+<hr>
+
+<p>
+NotImplementedError Traceback (most recent call last)<br>
+&lt;ipython-input-31-022320062e1f&gt; in &lt;module&gt;()<br>
+1 get_ipython().run_line_magic('pdb', '')<br>
+----&gt; 2 raise NotImplementedError()<br>
+NotImplementedError:<br>
+&gt; &lt;ipython-input-31-022320062e1f&gt;(2)&lt;module&gt;()<br>
+1 get_ipython().run_line_magic('pdb', '')<br>
+----&gt; 2 raise NotImplementedError()<br>
+This exposes an interactive mode in which you can use the pdb commands.
+</p>
+
+<p>
+Another handy debugging magic is %debug, which you can execute after an exception has been raised to delve back into the call stack at the time of failure.
+</p>
+
+<p>
+As an aside, also note how the traceback above demonstrates how magics are translated directly into Python commands, where %pdb became get_ipython().run_line_magic('pdb', ''). Executing this instead is identical to executing %pdb.
+</p>
+
+<h5>Timing Execution</h5>
+
+<p>
+Sometimes in research, it is important to provide runtime comparisons for competing approaches. IPython provides the two timing magics %time and %timeit, which each has both line and cell modes. The former simply times either the execution of a single statement or cell, depending on whether it is used in line or cell mode.
+</p>
+
+<br>
+
+<p>
+n = 1000000
+</p>
+
+<br>
+
+<p>
+Wall time: 32.9 ms<br>
+499999500000<br>
+And in cell mode:
+</p>
+
+<br>
+<br>
+
+<p>
+total = 0<br>
+for i in range(n):<br>
+total += i
+</p>
+
+<p>
+Wall time: 95.8 ms<br>
+The notable difference of %timeit from %time is that it runs the specified code many times and computes an average. You can specify the number of runs with the -n option, but if nothing is passed a fitting value will be chosen based on computation time.
+</p>
+
+<p>
+%timeit sum(range(n))<br>
+34.9 ms ± 276 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</p>
+
+<h5>Executing Different Languages</h5>
+
+<p>
+In the output of %lsmagic above, you may have noticed a number of cell magics named after various programming, scripting or markup langauges, including HTML, JavaScript, Ruby, and LaTeX. Using these will execute the cell using the specified language. There are also extensions available for other languages such as R.
+</p>
+
+<p>
+For example, to render HTML in your notebook:
+</p>
+
+<h5>HTML</h5>
+
+<p>
+%%HTML<br>
+This is &lt;em&gt;really&lt;/em&gt; neat!<br>
+This is really neat!
+</p>
+
+<p>
+Similarly, LaTeX is a markup language for displaying mathematical expressions, and can be used directly:
+</p>
+
+<h5>LaTeX</h5>
+
+<p>
+%%latex<br>
+Some important equations:$E = mc^2$<br>
+$e<sup>i pi</sup> = -1$<br>
+Some important equations:
+</p>
+
+<h5>Configuring Logging</h5>
+
+<p>
+Did you know that Jupyter has a built-in way to prominently display custom error messages above cell output? This can be handy for ensuring that errors and warnings about things like invalid inputs or parameterisations are hard to miss for anyone who might be using your notebooks. An easy, customisable way to hook into this is via the standard Python logging module.
+</p>
+
+<p>
+(Note: Just for this section, we’ll use some screenshots so that we can see how these errors look in a real notebook.)<br>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image.png">
+</p>
+
+<p>
+The logging output is displayed separately from print statements or standard cell output, appearing above all of this.
+</p>
+
+<p>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image001.png">
+</p>
+
+<p>
+This actually works because Jupyter notebooks listen to both standard output streams, stdout and stderr, but handle each differently; print statements and cell output route to stdout and by default logging has been configured to stream over stderr.
+</p>
+
+<p>
+This means we can configure logging to display other kinds of messages over stderr too.
+</p>
+
+<p>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image002.png"><br>
+We can customise the format of these messages like so:
+</p>
+
+<p>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image003.png">
+</p>
+
+<p>
+Note that every time you run a cell that adds a new stream handler via logger.addHandler(handler), you will receive an additional line of output each time for each message logged. We could place all the logging config in its own cell near the top of our notebook and leave it be or, as we have done here, brute force replace all existing handlers on the logger. We had to do that in this case anyway to remove the default handler.
+</p>
+
+<p>
+It’s also easy to log to an external file, which might come in handy if you’re executing your notebooks from the command line as discussed later. Just use a FileHandler instead of a StreamHandler:
+</p>
+
+<p>
+handler = logging.FileHandler(filename='important_log.log', mode='a')<br>
+A final thing to note is that the logging described here is not to be confused with using the %config magic to change the application’s logging level via %config Application.log_level="INFO", as this determines what Jupyter outputs to the terminal while it runs.
+</p>
+
+<h3>Extensions</h3>
+
+<p>
+As it is an open source webapp, plenty of extensions have been developed for Jupyter Notebooks, and there is a long official list. Indeed, in the Working with Databases section below we use the ipython-sql extension. Another of particular note is the bundle of extensions from Jupyter-contrib, which contains individual extensions for spell check, code folding and much more.
+</p>
+
+<p>
+You can install and set this up from the command line like so:
+</p>
+
+<br>
+
+<p>
+pip install jupyter_contrib_nbextensions<br>
+jupyter contrib nbextension install --user<br>
+jupyter nbextension enable spellchecker/main<br>
+jupyter nbextension enable codefolding/main<br>
+This will install the jupyter_contrib_nbextensions package in Python, install it in Jupyter, and then enable the spell check and code folding extensions. Don’t forget to refresh any notebooks live at the time of installation to load in changes.
+</p>
+
+<p>
+Note that Jupyter-contrib only works in regular Jupyter Notebooks, but there are new extensions for JupyterLab now being released on GitHub.
+</p>
+
+<h4>Enhancing Charts with Seaborn</h4>
+
+<p>
+One of the most common exercises Jupyter Notebook users undertake is producing plots. But Matplotlib, Python’s most popular charting library, isn’t renowned for attractive results despite it’s customisability. Seaborn instantly prettifies Matplotlib plots and even adds some additional features pertinent to data science, making your reports prettier and your job easier. It’s included in the default Anaconda installation or easily installed via pip install seaborn.
+</p>
+
+<p>
+Let’s check out an example. First, we’ll import our libraries and load some data.
+</p>
+
+<br>
+
+<p>
+import matplotlib.pyplot as plt<br>
+import seaborn as sns<br>
+data = sns.load_dataset("tips")<br>
+Seaborn provides some built-in sample datasets for documentation, testing and learning purposes, which we will make use of here. This “tips” dataset is a pandas DataFrame listing some billing information from a bar or restaurant. We can see the size of the total bill, the tip, the gender of the payer, and some other attributes.
+</p>
+
+<p>
+data.head()<br>
+total_bill	tip	sex	smoker	day	time	size<br>
+0	16.99	1.01	Female	No	Sun	Dinner	2<br>
+1	10.34	1.66	Male	No	Sun	Dinner	3<br>
+2	21.01	3.50	Male	No	Sun	Dinner	3<br>
+3	23.68	3.31	Male	No	Sun	Dinner	2<br>
+4	24.59	3.61	Female	No	Sun	Dinner	4
+</p>
+
+<p>
+We can easily plot total_bill vs tip in Matplotlib.
+</p>
+
+<p>
+plt.scatter(data.total_bill, data.tip);<br>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image004.png">
+</p>
+
+<p>
+Plotting in Seaborn is just as easy! Simply set a style and your Matplotlib plots will automatically be transformed.
+</p>
+
+<p>
+sns.set(style="darkgrid")plt.scatter(data.total_bill, data.tip);<br>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image005.png">
+</p>
+
+<p>
+What an improvement, and from only one import and a single extra line! Here, we used the darkgrid style, but Seaborn has a total of five built-in styles for you to play with: darkgrid, whitegrid, dark, white, and ticks.
+</p>
+
+<p>
+But we don’t have to stop with styling: as Seaborn is closely integrated with pandas data structures, its own scatter plot function unlocks additional features.
+</p>
+
+<p>
+sns.scatterplot(x="total_bill", y="tip", data=data);<br>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image006.png">
+</p>
+
+<p>
+Now we get default axis labels and an improved default marker for each data point. Seaborn can also automatically group by categories within your data to add another dimension to your plots. Let’s change the colour of our markers based on whether the group paying the bill were smokers or not.
+</p>
+
+<p>
+sns.scatterplot(x="total_bill", y="tip", hue="smoker", data=data);<br>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image007.png">
+</p>
+
+<p>
+That’s pretty neat! In fact, we can take this much further, but there’s simply too much detail to go into here. As a taster though, let’s colour by the size of the party paying the bill while also discriminating between smokers and non-smokers.
+</p>
+
+<p>
+sns.scatterplot(x="total_bill", y="tip", hue="size", style="smoker", data=data);<br>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image008.png">
+</p>
+
+<p>
+Hopefully it’s becoming clear why Seaborn describes itself as a “high-level interface for drawing attractive statistical graphics.”
+</p>
+
+<p>
+Indeed, it’s high-level enough to, for example, provide one-liners for plotting data with a line of best fit (determined through linear regression), whereas Matplotlib relies on you to prepare the data yourself. But if all you need is more attractive plots, it’s remarkably customisable; for example, if you aren’t happy with the default themes, you can choose from a whole array of standard color palettes or define your own.
+</p>
+
+<p>
+For more ways Seaborn allows you to visualise the structure of your data and the statistical relationships within it, check out their examples.
+</p>
+
+<h3>Macros</h3>
+
+<p>
+Like many users, you probably find yourself writing the same few tasks over and over again. Maybe there’s a bunch of packages you always need to import when starting a new notebook, a few statistics that you find yourself computing for every single dataset, or some standard charts that you’ve produced countless times?
+</p>
+
+<p>
+Jupyter lets you save code snippets as executable macros for use across all your notebooks. Although executing unknown code isn’t necessarily going to be useful for anyone else trying to read or use your notebooks, it’s definitely a handy productivity boost while you’re prototyping, investigating, or just playing around.
+</p>
+
+<p>
+Macros are just code, so they can contain variables that will have to be defined before execution. Let’s define one to use.
+</p>
+
+<p>
+name = 'Tim'<br>
+Now, to define a macro we first need some code to use.
+</p>
+
+<p>
+print('Hello, %s!' % name)<br>
+Hello, Tim!<br>
+We use the %macro and %store magics to set up a macro that’s reusable across all our notebooks. It’s common to begin macro names with a double underscore to distinguish them from other variables, like so:
+</p>
+
+<p>
+%macro -q __hello_world 23<br>
+\%store __hello_world<br>
+Stored '__hello_world' (Macro)<br>
+The %macro magic takes a name and a cell number (the number in the square brackets to the left of the cell; in this case 23 as in In [23]), and we’ve also passed -q to make it less verbose. %store actually allows us to save any variable for use in other sessions; here, we pass the name of the macro we created so we can use it again after the kernel is shut down or in other notebooks. Run without any parameters, %store lists your saved items.
+</p>
+
+<p>
+To load the macro from the store, we just run:
+</p>
+
+<p>
+%store -r __hello_world<br>
+And to execute it, we merely need to run a cell that solely contains the macro name.
+</p>
+
+<p>
+__hello_world<br>
+Hello, Tim!<br>
+Let’s modify the variable we used in the macro.
+</p>
+
+<p>
+name = 'Ben'<br>
+When we run the macro now, our modified value is picked up.
+</p>
+
+<p>
+__hello_world<br>
+Hello, Ben!<br>
+This works because macros just execute the saved code in the scope of the cell; if name was undefined we’d get an error.
+</p>
+
+<p>
+But macros are far from the only way to share code across notebooks.
+</p>
+
+<h3>Executing External Code</h3>
+
+<p>
+Not all code belongs in a Jupyter Notebook. Indeed, while it’s entirely possible to write statistical models or even entire multi-part projects in Jupyter notebooks, this code becomes messy, difficult to maintain, and unusable by others. Jupyter’s flexibility is no substitute for writing well-structured Python modules, which are trivially imported into your notebooks.
+</p>
+
+<p>
+In general, when your quick notebook project starts to get more serious and you find yourself writing code that is reusable or can be logically grouped into a Python script or module, you should do it! Aside from the fact that you can import your own modules directly in Python, Jupyter also lets you %load and %run external scripts to support better organised, larger-scale projects and reusability.
+</p>
+
+<p>
+Tasks such as importing the same set of packages over and over for every project project are a perfect candidate for the %load magic, which will load an external script into the cell in which it’s executed.
+</p>
+
+<p>
+But enough talk already, let’s look at an example! If we create a file imports.py containing the following code:
+</p>
+
+<br>
+<br>
+
+<p>
+import pandas as pd<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+We can load this simply by writing a one-line code cell, like so:
+</p>
+
+<p>
+%load imports.py<br>
+Executing this will replace the cell contents with the loaded file.
+</p>
+
+<br>
+
+<p>
+# %load imports.py
+</p>
+
+<p>
+import pandas as pd<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+Now we can run the cell again to import all our modules and we’re ready to go.
+</p>
+
+<p>
+The %run magic is similar, except it will execute the code and display any output, including Matplotlib plots. You can even execute entire notebooks this way, but remember that not all code truly belongs in a notebook. Let’s check out an example of this magic; consider a file containing the following short script.
+</p>
+
+<br>
+
+<p>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+import seaborn as sns<br>
+sns.set(style="darkgrid")<br>
+if <u>name</u> == '<u>main</u>':<br>
+h = plt.hist(np.random.triangular(0, 5, 9, 1000), bins=100, linewidth=0)<br>
+plt.show()<br>
+When executed via %run, we get the following result.
+</p>
+
+<p>
+%run triangle_hist.py<br>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image009.png">
+</p>
+
+<p>
+&lt;matplotlib.figure.Figure at 0x2ace50fe860&gt;<br>
+If you wish to pass arguments to a script, simply list them explicitly after the filename %run my_file.py 0 "Hello, World!" or using variables %run $filename {arg0} {arg1}. Additionally, use the -p option to run the code through the Python profiler.
+</p>
+
+<h3>Scripted Execution</h3>
+
+<p>
+Although the foremost power of Jupyter Notebooks emanates from their interactive flow, it is also possible to run notebooks in a non-interactive mode. Executing notebooks from scripts or the command line provides a powerful way to produce automated reports or similar documents.
+</p>
+
+<p>
+Jupyter offers a command line tool that can be used, in its simplest form, for file conversion and execution. As you are probably aware, notebooks can be converted to a number of formats, available from the UI under “File &gt; Download As”, including HTML, PDF, Python script, and even LaTeX. This functionality is exposed on the command line through an API called nbconvert. It is also possible to execute notebooks within Python scripts, but this is already well documented and the examples below should be equally applicable.
+</p>
+
+<p>
+It’s important to stress, similarly to %run, that while the ability to execute notebooks standalone makes it possible to write all manor of projects entirely within Jupyter notebooks, this is no substitute for breaking up code into standard Python modules and scripts as appropriate.
+</p>
+
+<h3>On the Command Line</h3>
+
+<p>
+It will become clear later how nbconvert empowers developers to create their own automated reporting pipelines, but first let’s look at some simple examples. The basic syntax is:
+</p>
+
+<p>
+jupyter nbconvert --to &lt;format&gt; notebook.ipynb<br>
+For example, to create a PDF, simply write:
+</p>
+
+<p>
+jupyter nbconvert --to pdf notebook.ipynb<br>
+This will take the currently saved static content of notebook.ipynb and create a new file called notebook.pdf. One caveat here is that to convert to PDF requires that you have pandoc (which comes with Anaconda) and LaTeX (which doesn’t) installed. Installation instructions depend on your operating system.
+</p>
+
+<p>
+By default, nbconvert doesn’t execute your notebook code cells. But if you also wish to, you can specify the --execute flag.
+</p>
+
+<p>
+jupyter nbconvert --to pdf --execute notebook.ipynb<br>
+A common snag arises from the fact that any error encountered running your notebook will halt execution. Fortunately, you can throw in the --allow-errors flag to instruct nbconvert to output the error message into the cell output instead.
+</p>
+
+<p>
+jupyter nbconvert --to pdf --execute --allow-errors notebook.ipynb<br>
+Parameterization with Environment Variables<br>
+Scripted execution is particularly useful for notebooks that don’t always produce the same output, such as if you are processing data that change over time, either from files on disk or pulled down via an API. The resulting documents can easily be emailed to a list of subscribers or uploaded to Amazon S3 for users to download from your website, for example.
+</p>
+
+<p>
+In such cases, it’s quite likely you may wish to parameterize your notebooks in order to run them with different initial values. The simplest way to achieve this is using environment variables, which you define before executing the notebook.
+</p>
+
+<p>
+Let’s say we want to generate several reports for different dates; in the first cell of our notebook, we can pull this information from an environment variable, which we will name REPORT_DATE. The %env line magic makes it easy to assign the value of an environment variable to a Python variable.
+</p>
+
+<p>
+report_date = %env REPORT_DATE<br>
+Then, to run the notebook (on UNIX systems) we can do something like this:
+</p>
+
+<p>
+REPORT_DATE=2018-01-01 jupyter nbconvert --to html --execute report.ipynb<br>
+As all environment variables are strings, we will have to parse them to get the data types we want. For example:
+</p>
+
+<br>
+
+<p>
+A_STRING="Hello, Tim!"<br>
+AN_INT=42<br>
+A_FLOAT=3.14<br>
+A_DATE=2017-12-31 jupyter nbconvert --to html --execute example.ipynb<br>
+And we simply parse like so:
+</p>
+
+<br>
+
+<p>
+import datetime as dt<br>
+the_str = %env A_STRING<br>
+int_str = %env AN_INT<br>
+my_int = int(int_str)<br>
+float_str = %env A_FLOAT<br>
+my_float = float(float_str)<br>
+date_str = %env A_DATE<br>
+my_date = dt.datetime.strptime(date_str, '%Y-%m-%d')<br>
+Parsing dates is definitely less intuitive than other common data types, but as usual there are several options in Python.
+</p>
+
+<h4>On Windows</h4>
+
+<p>
+If you’d like to set your environment variables and run your notebook in a single line on Windows, it isn’t quite as simple:
+</p>
+
+<p>
+cmd /C "set A_STRING=Hello, Tim!&amp;&amp; set AN_INT=42 &amp;&amp; set A_FLOAT=3.14 &amp;&amp; set A_DATE=2017-12-31&amp;&amp; jupyter nbconvert --to html --execute example.ipynb"<br>
+Keen readers will notice the lack of a space after defining A_STRING and A_DATE above. This is because trailing spaces are significant to the Windows set command, so while Python will successfully parse the integer and the float by first stripping whitespace, we have to be more careful with our strings.
+</p>
+
+<h3>Parameterization with Papermill</h3>
+
+<p>
+Using environment variables is fine for simple use-cases, but for anything more complex there are libraries that will let you pass parameters to your notebooks and execute them. With over 1000 stars on GitHub, probably the most popular is Papermill, which can be installed with pip install papermill.
+</p>
+
+<p>
+Papermill injects a new cell into your notebook that instantiates the parameters you pass in, parsing numeric inputs for you. This means you can just use the variables without any extra set-up (though dates still need to be parsed). Optionally, you can create a cell in your notebook that defines your default parameter values by clicking “View &gt; Cell Toolbar &gt; Tags” and adding a “parameters” tag to the cell of your choice.
+</p>
+
+<p>
+Our earlier example that produced an HTML document now becomes:
+</p>
+
+<p>
+papermill example.ipynb example-parameterised.ipynb -p my_string "Hello, Tim!" -p my_int 3 -p my_float 3.1416 -p a_date 2017-12-31<br>
+jupyter nbconvert example-parameterised.ipynb --to html --output example.html<br>
+We specify each parameter with the -p option and use an intermediary notebook so as not to change the original. It is perfectly possible to overwrite the original example.ipynb file, but remember that Papermill will inject a parameter cell.
+</p>
+
+<p>
+Now our notebook set-up is much simpler:
+</p>
+
+<br>
+
+<p>
+# my_string, my_int, and my_float are already defined!<br>
+import datetime as dt<br>
+my_date = dt.datetime.strptime(a_date, '%Y-%m-%d')<br>
+Our brief glance so far uncovers only the tip of the Papermill iceberg. The library can also execute and collect metrics across notebooks, summarise collections of notebooks, and it provides an API for storing data and Matplotlib plots for access in other scripts or notebooks. It’s all well documented in the GitHub readme, so there’s no need to reiterate here.
+</p>
+
+<p>
+It should now be clear that, using this technique, it is possible to write shell or Python scripts that can batch produce multiple documents and be scheduled via tools like crontab to run automatically on a schedule. Powerful stuff!
+</p>
+
+<h3>Styling Notebooks</h3>
+
+<p>
+If you’re looking for a particular look-and-feel in your notebooks, you can create an external CSS file and load it with Python.
+</p>
+
+<br>
+
+<p>
+from IPython.display import HTML<br>
+HTML('&lt;style&gt;{}&lt;/style&gt;'.format(open('custom.css').read()))<br>
+This works because IPython’s HTML objects are inserted directly into the cell output div as raw HTML. In fact, this is equivalent to writing an HTML cell:
+</p>
+
+<br>
+<br>
+
+<p>
+&lt;style&gt;.css-example { color: darkcyan; }&lt;/style&gt;<br>
+To demonstrate that this works let’s use another HTML cell.
+</p>
+
+<p>
+%%html<br>
+&lt;span class='css-example'&gt;This text has a nice colour&lt;/span&gt;<br>
+This text has a nice colour
+</p>
+
+<p>
+Using HTML cells would be fine for one or two lines, but it will typically be cleaner to load an external file as we first saw.
+</p>
+
+<p>
+If you would rather customise all your notebooks at once, you can write CSS straight into the ~/.jupyter/custom/custom.css file in your Jupyter config directory instead, though this will only work when running or converting notebooks on your own computer.
+</p>
+
+<p>
+Indeed, all of the aforementioned techniques will also work in notebooks converted to HTML, but will not work in converted PDFs.
+</p>
+
+<p>
+To explore your styling options, remember that as Jupyter is just a web app you can use your browser’s dev tools to inspect it while it’s running or delve into some exported HTML output. You will quickly find that it is well-structured: all cells are designated with the cell class, text and code cells are likewise respectively demarked with text_cell and code_cell, inputs and outputs are indicated with input and output, and so on.
+</p>
+
+<p>
+There are also various different popular pre-designed themes for Jupyter Notebooks distributed on GitHub. The most popular is jupyterthemes, which is available via pip install jupyterthemes and it’s as simple as running jt -t monokai to set the “monokai” theme. If you’re looking to theme JupyterLab instead, there is a growing list of options popping up on GitHub too.
+</p>
+
+<h3>Hiding Cells</h3>
+
+<p>
+Although it’s bad practice to hide parts of your notebook that would aid other people’s understanding, some of your cells may not be important to the reader. For example, you might wish to hide a cell that adds CSS styling to your notebook or, if you wanted to hide your default and injected Papermill parameters, you could modify your nbconvert call like so:
+</p>
+
+<p>
+jupyter nbconvert example-parameterised.ipynb --to html --output example.html --TagRemovePreprocessor.remove_cell_tags="{'parameters', 'injected-parameters'}"<br>
+In fact, this approach can be applied selectively to any tagged cells in your notebook, making the TagRemovePreprocessor configuration quite powerful. As an aside, there are also a host of other ways to hide cells in your notebooks.
+</p>
+
+<h3>Working with Databases</h3>
+
+<p>
+Databases are a data scientist’s bread and butter, so smoothing the interface between your databases and notebooks is going to be a real boon. Catherine Devlin‘s IPython SQL magic extension let’s you write SQL queries directly into code cells with minimal boilerplate as well as read the results straight into pandas DataFrames. First, go ahead and:
+</p>
+
+<p>
+pip install ipython-sql<br>
+With the package installed, we start things off by executing the following magic in a code cell:
+</p>
+
+<p>
+%load_ext sql<br>
+This loads the ipython-sql extension we just installed into our notebook. Let’s connect to a database!
+</p>
+
+<p>
+%sql sqlite://<br>
+'Connected: <span class="zim-tag">@None</span>'<br>
+Here, we just connected to a temporary in-memory database for the convenience of this example, but you’ll probably want to specify details appropriate to your database. Connection strings follow the SQLAlchemy standard:
+</p>
+
+<p>
+<a href="dialect+driver://username:password@host:port/database" title="dialect+driver://username:password@host:port/database" class="dialect+driver">dialect+driver://username:password@host:port/database</a><br>
+Yours might look more like <a href="postgresql://scott:tiger@localhost/mydatabase" title="postgresql://scott:tiger@localhost/mydatabase" class="postgresql">postgresql://scott:tiger@localhost/mydatabase</a>, where driver is postgresql, username is scott, password is tiger, host is localhost and the database name is mydatabase.
+</p>
+
+<p>
+Note that if you leave the connection string empty, the extension will try to use the DATABASE_URL environment variable; read more about how to customise this in the Scripted Execution section above.
+</p>
+
+<p>
+Next, let’s quickly populate our database from the tips dataset from Seaborn we used earlier.
+</p>
+
+<p>
+tips = sns.load_dataset("tips")<br>
+\%sql PERSIST tips
+</p>
+
+<p>
+<ul>
+<li>sqlite://</li>
+</ul>
+'Persisted tips'<br>
+We can now execute queries on our database. Note that we can use a multiline cell magic %% for multiline SQL.
+</p>
+
+<br>
+<br>
+
+<p>
+SELECT * FROM tips<br>
+LIMIT 3
+</p>
+
+<p>
+<ul>
+<li>sqlite://</li>
+</ul>
+Done.<br>
+index	total_bill	tip	sex	smoker	day	time	size<br>
+0	16.99	1.01	Female	No	Sun	Dinner	2<br>
+1	10.34	1.66	Male	No	Sun	Dinner	3<br>
+2	21.01	3.5	Male	No	Sun	Dinner	3<br>
+You can parameterise your queries using locally scoped variables by prefixing them with a colon.
+</p>
+
+<br>
+
+<p>
+meal_time = 'Dinner'
+</p>
+
+<br>
+
+<p>
+<ul>
+<li>sqlite://</li>
+</ul>
+Done.<br>
+index	total_bill	tip	sex	smoker	day	time	size<br>
+0	16.99	1.01	Female	No	Sun	Dinner	2<br>
+1	10.34	1.66	Male	No	Sun	Dinner	3<br>
+2	21.01	3.5	Male	No	Sun	Dinner	3<br>
+The complexity of our queries is not limited by the extension, so we can easily write more expressive queries such as finding all the results with a total bill greater than the mean.
+</p>
+
+<br>
+
+<p>
+result = %sql SELECT * FROM tips WHERE total_bill &gt; (SELECT AVG(total_bill) FROM tips)<br>
+larger_bills = result.DataFrame()<br>
+larger_bills.head(3)
+</p>
+
+<p>
+<ul>
+<li>sqlite://</li>
+</ul>
+Done.<br>
+index	total_bill	tip	sex	smoker	day	time	size<br>
+0	2	21.01	3.50	Male	No	Sun	Dinner	3<br>
+1	3	23.68	3.31	Male	No	Sun	Dinner	2<br>
+2	4	24.59	3.61	Female	No	Sun	Dinner	4<br>
+And as you can see, converting to a pandas DataFrame was easy too, which makes plotting results from our queries a piece of cake. Let’s check out some 95% confidence intervals.
+</p>
+
+<br>
+
+<p>
+sns.lmplot(x="total_bill", y="tip", hue="smoker", data=larger_bills);<br>
+<img src="./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image010.png">
+</p>
+
+<p>
+The ipython-sql extension also integrates with Matplotlib to let you call .plot(), .pie(), and .bar() straight on your query result, and can dump results direct to a CSV file via .csv(filename='my-file.csv'). 
+</p>
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+		<b>Backlinks:</b>
+
+		<a href='#CS notes'>CS notes</a>
+
+		<br /><br />
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image.png'>pasted_image.png</a></td><td>&nbsp;</td><td>93.3kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image001.png'>pasted_image001.png</a></td><td>&nbsp;</td><td>112kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image002.png'>pasted_image002.png</a></td><td>&nbsp;</td><td>132kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image003.png'>pasted_image003.png</a></td><td>&nbsp;</td><td>191kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image004.png'>pasted_image004.png</a></td><td>&nbsp;</td><td>7.58kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image005.png'>pasted_image005.png</a></td><td>&nbsp;</td><td>9.81kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image006.png'>pasted_image006.png</a></td><td>&nbsp;</td><td>13.3kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image007.png'>pasted_image007.png</a></td><td>&nbsp;</td><td>27.7kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image008.png'>pasted_image008.png</a></td><td>&nbsp;</td><td>28.9kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image009.png'>pasted_image009.png</a></td><td>&nbsp;</td><td>4.37kb</td></tr>
+
+
+			<tr><td><a href='./computerScience_files/CS_notes/Advance_Jupyter_Notebook_Tutorial/pasted_image010.png'>pasted_image010.png</a></td><td>&nbsp;</td><td>25.6kb</td></tr>
+
+			</table>
+	</div>
+
+	<hr />
+
+	<div class='heading'>
+	<h1>Beginners Jupyter Notebook Tutorial <a name='CS notes:Beginners Jupyter Notebook Tutorial'></a></h1>
+	</div>
+
+	<div class='content'>
+	<h2>Jupyter Notebook for Beginners: A Tutorial</h2>
+
+<p>
+The Jupyter Notebook is an incredibly powerful tool for interactively developing and presenting data science projects. This article will walk you through how to set up Jupyter Notebooks on your local machine and how to start using it to do data science projects.
+</p>
+
+<p>
+First, though: what is a “notebook”? A notebook integrates code and its output into a single document that combines visualizations, narrative text, mathematical equations, and other rich media. This intuitive workflow promotes iterative and rapid development, making notebooks an increasingly popular choice at the heart of contemporary data science, analysis, and increasingly science at large.
+</p>
+
+<p>
+Best of all, as part of the open source Project Jupyter, they are completely free.
+</p>
+
+<p>
+The Jupyter project is the successor to the earlier IPython Notebook, which was first published as a prototype in 2010. Although it is possible to use many different programming languages within Jupyter Notebooks, this article will focus on Python as it is the most common use case. (Among R users, R Studio tends to be a more popular choice).
+</p>
+
+<p>
+To get the most out of this tutorial you should be familiar with programming, specifically Python and pandas specifically. That said, if you have experience with another language, the Python in this article shouldn’t be too cryptic, and will still help you get Jupyter Notebooks set up locally. Jupyter Notebooks can also act as a flexible platform for getting to grips with pandas and even Python, as will become apparent in this article.
+</p>
+
+<p>
+We will:
+</p>
+
+<p>
+<ul>
+<li>Cover the basics of installing Jupyter and creating your first notebook</li>
+<li>Delve deeper and learn all the important terminology</li>
+<li>Explore how easily notebooks can be shared and published online. Indeed, this article is a Jupyter Notebook! Everything here was written in the Jupyter Notebook environment, though you are viewing it in a read-only form.</li>
+</ul>
+<div style='padding-left: 30pt'>
+ Example Data Analysis in a Jupyter Notebook
+</div>
+</p>
+
+<p>
+First, we will walk through setup and a sample analysis to answer a real-life question. This will demonstrate how the flow of a notebook makes data science tasks more intuitive for us as we work, and for others once it’s time to share our work.
+</p>
+
+<p>
+So, let’s say you’re a data analyst and you’ve been tasked with finding out how the profits of the largest companies in the US changed historically. You find a data set of Fortune 500 companies spanning over 50 years since the list’s first publication in 1955, put together from Fortune’s public archive. We’ve gone ahead and created a CSV of the data you can use here.
+</p>
+
+<p>
+As we shall demonstrate, Jupyter Notebooks are perfectly suited for this investigation. First, let’s go ahead and install Jupyter.
+</p>
+
+<h3>Installation</h3>
+
+<p>
+The easiest way for a beginner to get started with Jupyter Notebooks is by installing Anaconda. Anaconda is the most widely used Python distribution for data science and comes pre-loaded with all the most popular libraries and tools. Some of the biggest Python libraries wrapped up in Anaconda include NumPy, pandas and Matplotlib, though the full 1000+ list is exhaustive. This lets you hit the ground running in your own fully stocked data science workshop without the hassle of managing countless installations or worrying about dependencies and OS-specific (read: Windows-specific) installation issues.
+</p>
+
+<h4>To get Anaconda,</h4>
+
+<p>
+ simply:
+</p>
+
+<p>
+Download the latest version of Anaconda for Python 3 (ignore Python 2.7).<br>
+Install Anaconda by following the instructions on the download page and/or in the executable.<br>
+If you are a more advanced user with Python already installed and prefer to manage your packages manually, you can just use pip:
+</p>
+
+<p>
+pip3 install jupyter
+</p>
+
+<h3>Creating Your First Notebook</h3>
+
+<p>
+In this section, we’re going to learn to run and save notebooks, familiarize ourselves with their structure, and understand the interface. We’ll become intimate with some core terminology that will steer you towards a practical understanding of how to use Jupyter Notebooks by yourself and set us up for the next section, which steps through an example data analysis and brings everything we learn here to life.
+</p>
+
+<h3>Running Jupyter</h3>
+
+<p>
+On Windows, you can run Jupyter via the shortcut Anaconda adds to your start menu, which will open a new tab in your default web browser that should look something like the following screenshot.
+</p>
+
+<h3>Jupyter control panel</h3>
+
+<br>
+
+<p>
+This isn’t a notebook just yet, but don’t panic! There’s not much to it. This is the Notebook Dashboard, specifically designed for managing your Jupyter Notebooks. Think of it as the launchpad for exploring, editing and creating your notebooks.
+</p>
+
+<p>
+Be aware that the dashboard will give you access only to the files and sub-folders contained within Jupyter’s start-up directory; however, the start-up directory can be changed. It is also possible to start the dashboard on any system via the command prompt (or terminal on Unix systems) by entering the command jupyter notebook; in this case, the current working directory will be the start-up directory.
+</p>
+
+<p>
+The astute reader may have noticed that the URL for the dashboard is something like <a href="http://localhost:8888/tree" title="http://localhost:8888/tree" class="http">http://localhost:8888/tree</a>. Localhost is not a website, but indicates that the content is being served from your local machine: your own computer. Jupyter’s Notebooks and dashboard are web apps, and Jupyter starts up a local Python server to serve these apps to your web browser, making it essentially platform independent and opening the door to easier sharing on the web.
+</p>
+
+<p>
+The dashboard’s interface is mostly self-explanatory — though we will come back to it briefly later. So what are we waiting for? Browse to the folder in which you would like to create your first notebook, click the “New” drop-down button in the top-right and select “Python 3” (or the version of your choice).
+</p>
+
+<h3>New notebook menu</h3>
+
+<br>
+
+<p>
+Hey presto, here we are! Your first Jupyter Notebook will open in new tab — each notebook uses its own tab because you can open multiple notebooks simultaneously. If you switch back to the dashboard, you will see the new file Untitled.ipynb and you should see some green text that tells you your notebook is running.
+</p>
+
+<h3>What is an ipynb File?</h3>
+
+<p>
+It will be useful to understand what this file really is. Each .ipynb file is a text file that describes the contents of your notebook in a format called JSON. Each cell and its contents, including image attachments that have been converted into strings of text, is listed therein along with some metadata. You can edit this yourself — if you know what you are doing! — by selecting “Edit &gt; Edit Notebook Metadata” from the menu bar in the notebook.
+</p>
+
+<p>
+You can also view the contents of your notebook files by selecting “Edit” from the controls on the dashboard, but the keyword here is “can“; there’s no reason other than curiosity to do so unless you really know what you are doing.
+</p>
+
+<h3>The Notebook Interface</h3>
+
+<p>
+Now that you have an open notebook in front of you, its interface will hopefully not look entirely alien; after all, Jupyter is essentially just an advanced word processor. Why not take a look around? Check out the menus to get a feel for it, especially take a few moments to scroll down the list of commands in the command palette, which is the small button with the keyboard icon (or Ctrl + Shift + P).
+</p>
+
+<h3>New Jupyter Notebook</h3>
+
+<br>
+
+<p>
+There are two fairly prominent terms that you should notice, which are probably new to you: cells and kernels are key both to understanding Jupyter and to what makes it more than just a word processor. Fortunately, these concepts are not difficult to understand.
+</p>
+
+<p>
+A kernel is a “computational engine” that executes the code contained in a notebook document.<br>
+A cell is a container for text to be displayed in the notebook or code to be executed by the notebook’s kernel.<br>
+Cells<br>
+We’ll return to kernels a little later, but first let’s come to grips with cells. Cells form the body of a notebook. In the screenshot of a new notebook in the section above, that box with the green outline is an empty cell. There are two main cell types that we will cover:
+</p>
+
+<p>
+A code cell contains code to be executed in the kernel and displays its output below.<br>
+A Markdown cell contains text formatted using Markdown and displays its output in-place when it is run.<br>
+The first cell in a new notebook is always a code cell. Let’s test it out with a classic hello world example. Type print('Hello World!') into the cell and click the run button Notebook Run Button in the toolbar above or press Ctrl + Enter. The result should look like this:
+</p>
+
+<p>
+print('Hello World!')<br>
+Hello World!<br>
+When you ran the cell, its output will have been displayed below and the label to its left will have changed from In [ ] to In [1]. The output of a code cell also forms part of the document, which is why you can see it in this article. You can always tell the difference between code and Markdown cells because code cells have that label on the left and Markdown cells do not.
+</p>
+
+<p>
+The “In” part of the label is simply short for “Input,” while the label number indicates when the cell was executed on the kernel — in this case the cell was executed first. Run the cell again and the label will change to In [2] because now the cell was the second to be run on the kernel. It will become clearer why this is so useful later on when we take a closer look at kernels.
+</p>
+
+<p>
+From the menu bar, click Insert and select Insert Cell Below to create a new code cell underneath your first and try out the following code to see what happens. Do you notice anything different?
+</p>
+
+<p>
+import time<br>
+time.sleep(3)<br>
+This cell doesn’t produce any output, but it does take three seconds to execute. Notice how Jupyter signifies that the cell is currently running by changing its label to In [*].
+</p>
+
+<p>
+In general, the output of a cell comes from any text data specifically printed during the cells execution, as well as the value of the last line in the cell, be it a lone variable, a function call, or something else. For example:
+</p>
+
+<p>
+def say_hello(recipient):<br>
+<div style='padding-left: 30pt'>
+return 'Hello, {}!'.format(recipient)
+</div>
+say_hello('Tim')<br>
+'Hello, Tim!'<br>
+You’ll find yourself using this almost constantly in your own projects, and we’ll see more of it later on.
+</p>
+
+<h3>Keyboard Shortcuts</h3>
+
+<p>
+One final thing you may have observed when running your cells is that their border turned blue, whereas it was green while you were editing. There is always one “active” cell highlighted with a border whose color denotes its current mode, where green means “edit mode” and blue is “command mode.”
+</p>
+
+<p>
+So far we have seen how to run a cell with Ctrl + Enter, but there are plenty more. Keyboard shortcuts are a very popular aspect of the Jupyter environment because they facilitate a speedy cell-based workflow. Many of these are actions you can carry out on the active cell when it’s in command mode.
+</p>
+
+<p>
+Below, you’ll find a list of some of Jupyter’s keyboard shortcuts. You’re not expected to pick them up immediately, but the list should give you a good idea of what’s possible.
+</p>
+
+<p>
+Toggle between edit and command mode with Esc and Enter, respectively.<br>
+Once in command mode:<br>
+Scroll up and down your cells with your Up and Down keys.<br>
+Press A or B to insert a new cell above or below the active cell.<br>
+M will transform the active cell to a Markdown cell.<br>
+Y will set the active cell to a code cell.<br>
+D + D (D twice) will delete the active cell.<br>
+Z will undo cell deletion.<br>
+Hold Shift and press Up or Down to select multiple cells at once.<br>
+With multiple cells selected, Shift + M will merge your selection.<br>
+Ctrl + Shift + -, in edit mode, will split the active cell at the cursor.<br>
+You can also click and Shift + Click in the margin to the left of your cells to select them.<br>
+Go ahead and try these out in your own notebook. Once you’ve had a play, create a new Markdown cell and we’ll learn how to format the text in our notebooks.
+</p>
+
+<h3>Markdown</h3>
+
+<p>
+Markdown is a lightweight, easy to learn markup language for formatting plain text. Its syntax has a one-to-one correspondance with HTML tags, so some prior knowledge here would be helpful but is definitely not a prerequisite. Remember that this article was written in a Jupyter notebook, so all of the narrative text and images you have seen so far was achieved in Markdown. Let’s cover the basics with a quick example.
+</p>
+
+<p>
+# This is a level 1 heading<br>
+## This is a level 2 heading<br>
+This is some plain text that forms a paragraph.<br>
+Add emphasis via <b>bold</b> and <u>bold</u>, or *italic* and _italic_.<br>
+Paragraphs must be separated by an empty line.<br>
+<ul>
+<li>Sometimes we want to include lists.</li>
+<li>Which can be indented.</li>
+</ul>
+<ol type="1" start="1">
+<li>Lists can also be numbered.</li>
+<li>For ordered lists.</li>
+</ol>
+[It is possible to include hyperlinks](<a href="https://www.example.com" title="https://www.example.com" class="https">https://www.example.com</a>)<br>
+Inline code uses single backticks: `foo()`, and code blocks use triple backticks:<br>
+```<br>
+bar()<br>
+```<br>
+Or can be indented by 4 spaces:<br>
+<div style='padding-left: 30pt'>
+foo()
+</div>
+And finally, adding images is easy: ![Alt text](<a href="https://www.example.com/image.jpg" title="https://www.example.com/image.jpg" class="https">https://www.example.com/image.jpg</a>)<br>
+When attaching images, you have three options:
+</p>
+
+<p>
+Use a URL to an image on the web.<br>
+Use a local URL to an image that you will be keeping alongside your notebook, such as in the same git repo.<br>
+Add an attachment via “Edit &gt; Insert Image”; this will convert the image into a string and store it inside your notebook .ipynb file.
+</p>
+
+<p>
+Note that this will make your .ipynb file much larger!
+</p>
+
+<p>
+There is plenty more detail to Markdown, especially around hyperlinking, and it’s also possible to simply include plain HTML. Once you find yourself pushing the limits of the basics above, you can refer to the official guide from the creator, John Gruber, on his website.
+</p>
+
+<h3>Kernels</h3>
+
+<p>
+Behind every notebook runs a kernel. When you run a code cell, that code is executed within the kernel and any output is returned back to the cell to be displayed. The kernel’s state persists over time and between cells — it pertains to the document as a whole and not individual cells.
+</p>
+
+<p>
+For example, if you import libraries or declare variables in one cell, they will be available in another. In this way, you can think of a notebook document as being somewhat comparable to a script file, except that it is multimedia. Let’s try this out to get a feel for it. First, we’ll import a Python package and define a function.
+</p>
+
+<p>
+import numpy as np<br>
+def square(x):<br>
+<div style='padding-left: 30pt'>
+return x * x
+</div>
+Once we’ve executed the cell above, we can reference np and square in any other cell.
+</p>
+
+<p>
+x = np.random.randint(1, 10)<br>
+y = square(x)<br>
+print('%d squared is %d' % (x, y))<br>
+1 squared is 1<br>
+This will work regardless of the order of the cells in your notebook. You can try it yourself, let’s print out our variables again.
+</p>
+
+<p>
+print('Is %d squared is %d?' % (x, y))<br>
+Is 1 squared is 1?<br>
+No surprises here! But now let’s change y.
+</p>
+
+<p>
+y = 10<br>
+What do you think will happen if we run the cell containing our print statement again? We will get the output Is 4 squared is 10?!
+</p>
+
+<p>
+Most of the time, the flow in your notebook will be top-to-bottom, but it’s common to go back to make changes. In this case, the order of execution stated to the left of each cell, such as In [6], will let you know whether any of your cells have stale output. And if you ever wish to reset things, there are several incredibly useful options from the Kernel menu:
+</p>
+
+<p>
+Restart: restarts the kernel, thus clearing all the variables etc that were defined.<br>
+Restart &amp; Clear Output: same as above but will also wipe the output displayed below your code cells.<br>
+Restart &amp; Run All: same as above but will also run all your cells in order from first to last.<br>
+If your kernel is ever stuck on a computation and you wish to stop it, you can choose the Interupt option.
+</p>
+
+<h3>Choosing a Kernel</h3>
+
+<p>
+You may have noticed that Jupyter gives you the option to change kernel, and in fact there are many different options to choose from. Back when you created a new notebook from the dashboard by selecting a Python version, you were actually choosing which kernel to use.
+</p>
+
+<p>
+Not only are there kernels for different versions of Python, but also for over 100 languages including Java, C, and even Fortran. Data scientists may be particularly interested in the kernels for R and Julia, as well as both imatlab and the Calysto MATLAB Kernel for Matlab. The SoS kernel provides multi-language support within a single notebook. Each kernel has its own installation instructions, but will likely require you to run some commands on your computer.
+</p>
+
+<h3>Example Analysis</h3>
+
+<p>
+Now we’ve looked at what a Jupyter Notebook is, it’s time to look at how they’re used in practice, which should give you a clearer understanding of why they are so popular. It’s finally time to get started with that Fortune 500 data set mentioned earlier. Remember, our goal is to find out how the profits of the largest companies in the US changed historically.
+</p>
+
+<p>
+It’s worth noting that everyone will develop their own preferences and style, but the general principles still apply, and you can follow along with this section in your own notebook if you wish, which gives you the scope to play around.
+</p>
+
+<h3>Naming Your Notebooks</h3>
+
+<p>
+Before you start writing your project, you’ll probably want to give it a meaningful name. Perhaps somewhat confusingly, you cannot name or rename your notebooks from the notebook app itself, but must use either the dashboard or your file browser to rename the .ipynb file. We’ll head back to the dashboard to rename the file you created earlier, which will have the default notebook file name Untitled.ipynb.
+</p>
+
+<p>
+You cannot rename a notebook while it is running, so you’ve first got to shut it down. The easiest way to do this is to select “File &gt; Close and Halt” from the notebook menu. However, you can also shutdown the kernel either by going to “Kernel &gt; Shutdown” from within the notebook app or by selecting the notebook in the dashboard and clicking “Shutdown” (see image below).
+</p>
+
+<h3>A running notebook</h3>
+
+<br>
+
+<p>
+You can then select your notebook and and click “Rename” in the dashboard controls.
+</p>
+
+<p>
+A running notebook
+</p>
+
+<p>
+Note that closing the notebook tab in your browser will not “close” your notebook in the way closing a document in a traditional application will. The notebook’s kernel will continue to run in the background and needs to be shut down before it is truly “closed” — though this is pretty handy if you accidentally close your tab or browser! If the kernel is shut down, you can close the tab without worrying about whether it is still running or not.
+</p>
+
+<p>
+Once you’ve named your notebook, open it back up and we’ll get going.
+</p>
+
+<h3>Setup</h3>
+
+<p>
+It’s common to start off with a code cell specifically for imports and setup, so that if you choose to add or change anything, you can simply edit and re-run the cell without causing any side-effects.
+</p>
+
+<p>
+import pandas as pd<br>
+import matplotlib.pyplot as plt<br>
+import seaborn as sns<br>
+sns.set(style="darkgrid")<br>
+We import pandas to work with our data, Matplotlib to plot charts, and Seaborn to make our charts prettier. It’s also common to import NumPy but in this case, although we use it via pandas, we don’t need to explicitly. And that first line isn’t a Python command, but uses something called a line magic to instruct Jupyter to capture Matplotlib plots and render them in the cell output; this is one of a range of advanced features that are out of the scope of this article.
+</p>
+
+<p>
+Let’s go ahead and load our data.
+</p>
+
+<p>
+df = pd.read_csv('fortune500.csv')<br>
+It’s sensible to also do this in a single cell in case we need to reload it at any point.
+</p>
+
+<h3>Save and Checkpoint</h3>
+
+<p>
+Now we’ve got started, it’s best practice to save regularly. Pressing Ctrl + S will save your notebook by calling the “Save and Checkpoint” command, but what this checkpoint thing?
+</p>
+
+<p>
+Every time you create a new notebook, a checkpoint file is created as well as your notebook file; it will be located within a hidden subdirectory of your save location called .ipynb_checkpoints and is also a .ipynb file. By default, Jupyter will autosave your notebook every 120 seconds to this checkpoint file without altering your primary notebook file. When you “Save and Checkpoint,” both the notebook and checkpoint files are updated. Hence, the checkpoint enables you to recover your unsaved work in the event of an unexpected issue. You can revert to the checkpoint from the menu via “File &gt; Revert to Checkpoint.”
+</p>
+
+<h3>Investigating Our Data Set</h3>
+
+<p>
+Now we’re really rolling! Our notebook is safely saved and we’ve loaded our data set df into the most-used pandas data structure, which is called a DataFrame and basically looks like a table. What does ours look like?
+</p>
+
+<p>
+df.head()<br>
+Year	Rank	Company	Revenue (in millions)	Profit (in millions)<br>
+0	1955	1	General Motors	9823.5	806<br>
+1	1955	2	Exxon Mobil	5661.4	584.8<br>
+2	1955	3	U.S. Steel	3250.4	195.4<br>
+3	1955	4	General Electric	2959.1	212.6<br>
+4	1955	5	Esmark	2510.8	19.1<br>
+df.tail()<br>
+Year	Rank	Company	Revenue (in millions)	Profit (in millions)<br>
+25495	2005	496	Wm. Wrigley Jr.	3648.6	493<br>
+25496	2005	497	Peabody Energy	3631.6	175.4<br>
+25497	2005	498	Wendy’s International	3630.4	57.8<br>
+25498	2005	499	Kindred Healthcare	3616.6	70.6<br>
+25499	2005	500	Cincinnati Financial	3614.0	584<br>
+Looking good. We have the columns we need, and each row corresponds to a single company in a single year.
+</p>
+
+<p>
+Let’s just rename those columns so we can refer to them later.
+</p>
+
+<p>
+df.columns = ['year', 'rank', 'company', 'revenue', 'profit']<br>
+Next, we need to explore our data set. Is it complete? Did pandas read it as expected? Are any values missing?
+</p>
+
+<p>
+len(df)<br>
+25500<br>
+Okay, that looks good — that’s 500 rows for every year from 1955 to 2005, inclusive.
+</p>
+
+<p>
+Let’s check whether our data set has been imported as we would expect. A simple check is to see if the data types (or dtypes) have been correctly interpreted.
+</p>
+
+<p>
+df.dtypes<br>
+year int64<br>
+rank int64<br>
+company object<br>
+revenue float64<br>
+profit object<br>
+dtype: object<br>
+Uh oh. It looks like there’s something wrong with the profits column — we would expect it to be a float64 like the revenue column. This indicates that it probably contains some non-integer values, so let’s take a look.
+</p>
+
+<p>
+non_numberic_profits = df.profit.str.contains('[^0-9.-]')<br>
+df.loc[non_numberic_profits].head()<br>
+year	rank	company	revenue	profit<br>
+228	1955	229	Norton	135.0	N.A.<br>
+290	1955	291	Schlitz Brewing	100.0	N.A.<br>
+294	1955	295	Pacific Vegetable Oil	97.9	N.A.<br>
+296	1955	297	Liebmann Breweries	96.0	N.A.<br>
+352	1955	353	Minneapolis-Moline	77.4	N.A.<br>
+Just as we suspected! Some of the values are strings, which have been used to indicate missing data. Are there any other values that have crept in?
+</p>
+
+<p>
+set(df.profit[non_numberic_profits])<br>
+{'N.A.'}<br>
+That makes it easy to interpret, but what should we do? Well, that depends how many values are missing.
+</p>
+
+<p>
+len(df.profit[non_numberic_profits])<br>
+369<br>
+It’s a small fraction of our data set, though not completely inconsequential as it is still around 1.5%. If rows containing N.A. are, roughly, uniformly distributed over the years, the easiest solution would just be to remove them. So let’s have a quick look at the distribution.
+</p>
+
+<p>
+bin_sizes, _, _ = plt.hist(df.year[non_numberic_profits], bins=range(1955, 2006))<br>
+<img src="./computerScience_files/CS_notes/Beginners_Jupyter_Notebook_Tutorial/pasted_image.png">
+</p>
+
+<p>
+At a glance, we can see that the most invalid values in a single year is fewer than 25, and as there are 500 data points per year, removing these values would account for less than 4% of the data for the worst years. Indeed, other than a surge around the 90s, most years have fewer than half the missing values of the peak. For our purposes, let’s say this is acceptable and go ahead and remove these rows.
+</p>
+
+<p>
+df = df.loc[~non_numberic_profits]<br>
+df.profit = df.profit.apply(pd.to_numeric)<br>
+We should check that worked.
+</p>
+
+<p>
+len(df)<br>
+25131<br>
+df.dtypes<br>
+year int64<br>
+rank int64<br>
+company object<br>
+revenue float64<br>
+profit float64<br>
+dtype: object<br>
+Great! We have finished our data set setup.
+</p>
+
+<p>
+If you were going to present your notebook as a report, you could get rid of the investigatory cells we created, which are included here as a demonstration of the flow of working with notebooks, and merge relevant cells (see the Advanced Functionality section below for more on this) to create a single data set setup cell. This would mean that if we ever mess up our data set elsewhere, we can just rerun the setup cell to restore it.
+</p>
+
+<h3>Plotting with matplotlib</h3>
+
+<p>
+Next, we can get to addressing the question at hand by plotting the average profit by year. We might as well plot the revenue as well, so first we can define some variables and a method to reduce our code.
+</p>
+
+<p>
+group_by_year = df.loc[:, ['year', 'revenue', 'profit']].groupby('year')<br>
+avgs = group_by_year.mean()<br>
+x = avgs.index<br>
+y1 = avgs.profit<br>
+def plot(x, y, ax, title, y_label):<br>
+<div style='padding-left: 30pt'>
+ax.set_title(title)<br>
+ax.set_ylabel(y_label)<br>
+ax.plot(x, y)<br>
+ax.margins(x=0, y=0)
+</div>
+Now let’s plot!
+</p>
+
+<p>
+fig, ax = plt.subplots()<br>
+plot(x, y1, ax, 'Increase in mean Fortune 500 company profits from 1955 to 2005', 'Profit (millions)')<br>
+Increase in mean Fortune 500 company profits from 1955 to 2005
+</p>
+
+<p>
+Wow, that looks like an exponential, but it’s got some huge dips. They must correspond to the early 1990s recession and the dot-com bubble. It’s pretty interesting to see that in the data. But how come profits recovered to even higher levels post each recession?
+</p>
+
+<p>
+Maybe the revenues can tell us more.
+</p>
+
+<p>
+y2 = avgs.revenue<br>
+fig, ax = plt.subplots()<br>
+plot(x, y2, ax, 'Increase in mean Fortune 500 company revenues from 1955 to 2005', 'Revenue (millions)')<br>
+Increase in mean Fortune 500 company revenues from 1955 to 2005
+</p>
+
+<p>
+That adds another side to the story. Revenues were no way nearly as badly hit, that’s some great accounting work from the finance departments.
+</p>
+
+<p>
+With a little help from Stack Overflow, we can superimpose these plots with +/- their standard deviations.
+</p>
+
+<p>
+def plot_with_std(x, y, stds, ax, title, y_label):<br>
+<div style='padding-left: 30pt'>
+ax.fill_between(x, y - stds, y + stds, alpha=0.2)<br>
+plot(x, y, ax, title, y_label)
+</div>
+fig, (ax1, ax2) = plt.subplots(ncols=2)<br>
+title = 'Increase in mean and std Fortune 500 company %s from 1955 to 2005'<br>
+stds1 = group_by_year.std().profit.values<br>
+stds2 = group_by_year.std().revenue.values<br>
+plot_with_std(x, y1.values, stds1, ax1, title % 'profits', 'Profit (millions)')<br>
+plot_with_std(x, y2.values, stds2, ax2, title % 'revenues', 'Revenue (millions)')<br>
+fig.set_size_inches(14, 4)<br>
+fig.tight_layout()<br>
+jupyter-notebook-tutorial_48_0
+</p>
+
+<p>
+That’s staggering, the standard deviations are huge. Some Fortune 500 companies make billions while others lose billions, and the risk has increased along with rising profits over the years. Perhaps some companies perform better than others; are the profits of the top 10% more or less volatile than the bottom 10%?
+</p>
+
+<p>
+There are plenty of questions that we could look into next, and it’s easy to see how the flow of working in a notebook matches one’s own thought process, so now it’s time to draw this example to a close. This flow helped us to easily investigate our data set in one place without context switching between applications, and our work is immediately sharable and reproducible. If we wished to create a more concise report for a particular audience, we could quickly refactor our work by merging cells and removing intermediary code.
+</p>
+
+<p>
+Note: The original version of this article used as_matrix() instead of .values in the code snippet above. As of this writing, .as_matrix() still works, but it is slated for removal in a future version of pandas, so we’ve replaced it with the future-proof .values.
+</p>
+
+<h3>Sharing Your Notebooks</h3>
+
+<p>
+When people talk of sharing their notebooks, there are generally two paradigms they may be considering. Most often, individuals share the end-result of their work, much like this article itself, which means sharing non-interactive, pre-rendered versions of their notebooks; however, it is also possible to collaborate on notebooks with the aid version control systems such as Git.
+</p>
+
+<p>
+That said, there are some nascent companies popping up on the web offering the ability to run interactive Jupyter Notebooks in the cloud.
+</p>
+
+<h3>Before You Share</h3>
+
+<p>
+A shared notebook will appear exactly in the state it was in when you export or save it, including the output of any code cells. Therefore, to ensure that your notebook is share-ready, so to speak, there are a few steps you should take before sharing:
+</p>
+
+<p>
+Click “Cell &gt; All Output &gt; Clear”<br>
+Click “Kernel &gt; Restart &amp; Run All”<br>
+Wait for your code cells to finish executing and check they did so as expected<br>
+This will ensure your notebooks don’t contain intermediary output, have a stale state, and executed in order at the time of sharing.
+</p>
+
+<h3>Exporting Your Notebooks</h3>
+
+<p>
+Jupyter has built-in support for exporting to HTML and PDF as well as several other formats, which you can find from the menu under “File &gt; Download As.” If you wish to share your notebooks with a small private group, this functionality may well be all you need. Indeed, as many researchers in academic institutions are given some public or internal webspace, and because you can export a notebook to an HTML file, Jupyter Notebooks can be an especially convenient way for them to share their results with their peers.
+</p>
+
+<p>
+But if sharing exported files doesn’t cut it for you, there are also some immensely popular methods of sharing .ipynb files more directly on the web.
+</p>
+
+<h3>GitHub</h3>
+
+<p>
+With the number of public notebooks on GitHub exceeding 1.8 million by early 2018, it is surely the most popular independent platform for sharing Jupyter projects with the world. GitHub has integrated support for rendering .ipynb files directly both in repositories and gists on its website. If you aren’t already aware, GitHub is a code hosting platform for version control and collaboration for repositories created with Git. You’ll need an account to use their services, but standard accounts are free.
+</p>
+
+<p>
+Once you have a GitHub account, the easiest way to share a notebook on GitHub doesn’t actually require Git at all. Since 2008, GitHub has provided its Gist service for hosting and sharing code snippets, which each get their own repository. To share a notebook using Gists:
+</p>
+
+<p>
+Sign in and browse to gist.github.com.<br>
+Open your .ipynb file in a text editor, select all and copy the JSON inside.<br>
+Paste the notebook JSON into the gist.<br>
+Give your Gist a filename, remembering to add .iypnb or this will not work.<br>
+Click either “Create secret gist” or “Create public gist.”<br>
+This should look something like the following:
+</p>
+
+<p>
+Creating a Gist
+</p>
+
+<p>
+If you created a public Gist, you will now be able to share its URL with anyone, and others will be able to fork and clone your work.
+</p>
+
+<p>
+Creating your own Git repository and sharing this on GitHub is beyond the scope of this tutorial, but GitHub provides plenty of guides for you to get started on your own.
+</p>
+
+<p>
+An extra tip for those using git is to add an exception to your .gitignore for those hidden .ipynb_checkpoints directories Jupyter creates, so as not to commit checkpoint files unnecessarily to your repo.
+</p>
+
+<h3>Nbviewer</h3>
+
+<p>
+Having grown to render hundreds of thousands of notebooks every week by 2015, NBViewer is the most popular notebook renderer on the web. If you already have somewhere to host your Jupyter Notebooks online, be it GitHub or elsewhere, NBViewer will render your notebook and provide a shareable URL along with it. Provided as a free service as part of Project Jupyter, it is available at nbviewer.jupyter.org.
+</p>
+
+<p>
+Initially developed before GitHub’s Jupyter Notebook integration, NBViewer allows anyone to enter a URL, Gist ID, or GitHub username/repo/file and it will render the notebook as a webpage. A Gist’s ID is the unique number at the end of its URL; for example, the string of characters after the last backslash in <a href="https://gist.github.com/username/50896401c23e0bf417e89cd57e89e1de" title="https://gist.github.com/username/50896401c23e0bf417e89cd57e89e1de" class="https">https://gist.github.com/username/50896401c23e0bf417e89cd57e89e1de</a>. If you enter a GitHub username or username/repo, you will see a minimal file browser that lets you explore a user’s repos and their contents.
+</p>
+
+<p>
+The URL NBViewer displays when displaying a notebook is a constant based on the URL of the notebook it is rendering, so you can share this with anyone and it will work as long as the original files remain online — NBViewer doesn’t cache files for very long.
+</p>
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+		<b>Backlinks:</b>
+
+		<a href='#CS notes'>CS notes</a>
+
+		<br /><br />
+
+			<b>Attachments:</b>
+			<table>
+
+			<tr><td><a href='./computerScience_files/CS_notes/Beginners_Jupyter_Notebook_Tutorial/pasted_image.png'>pasted_image.png</a></td><td>&nbsp;</td><td>4.07kb</td></tr>
+
+			</table>
+	</div>
+
+	<hr />
+
+	<div class='heading'>
+	<h1>Setup VS Code <a name='CS notes:Setup VS Code'></a></h1>
+	</div>
+
+	<div class='content'>
+	<h2>Setting up your own Data Science workspace with Visual Studio Code and Anaconda (Python)</h2>
+
+<p>
+If you’re just starting out in the field of data science, creating a personal workspace will help you keeping your projects organized. There are lots of different tools to use and if you’re just like me, starting out in the field, you might find it daunting to dive right in. In this post I’ll show you the basics of how you can set up your own workspace on macOS with some of the most commonly used tools in the trade. While I use macOS in this guide, the steps are almost identically for Windows platforms and I expect you should have no trouble using this guide on Windows. At the end of this guide you’ll be able to:<br>
+<ul>
+<li>Set up a Python environment with Anaconda.</li>
+<li>Create a Visual Studio Code workspace and run Python scripts.</li>
+<li>Install packages and managing different Anaconda environments.</li>
+</ul>
+Let’s get you started!
+</p>
+
+<h3>Setting up Python environments with Anaconda</h3>
+
+<p>
+Anaconda is a free distribution of Python and R, mostly used for the application of data science, machine learning, data processing, analytics et cetera. It lets you manage your own environments and packages that you would use in your projects. We’ll be using Anaconda for our package management and deployment. To build our workspace, we need to install and configure Anaconda. We will be following these steps:<br>
+<ul>
+<li>Install Anaconda.</li>
+<li>Create a new environment with the latest version of python.</li>
+<li>Installing packages into your environment.</li>
+<li>Download and install Anaconda</li>
+</ul>
+</p>
+
+<p>
+Go to the Anaconda website and download the latest version of Anaconda for your platform. You will be able to download Anaconda with Python 3.7 and Python 2.7. Although I personally prefer to get the latest version of Python, sometimes Python packages require a specific version of Python — hence the reason why I will show you how to set up multiple Python environments. We will use Python 3.7 for now, just to be sure. After installing Anaconda, start Anaconda Navigator.
+</p>
+
+<p>
+Managing different environments within Anaconda Navigator
+</p>
+
+<p>
+Upon opening the Anaconda Navigator, you see Anaconda has already set up some tools and packages like Jupyter, Spyder. Notice there’s an option to install VS Code.<br>
+Click to Install.
+</p>
+
+<p>
+The Anaconda Navigator installation comes with default packages preinstalled.
+</p>
+
+<p>
+In the meantime, navigate to Environments in the menu on your left. In here you will see that Anaconda has already configured a base (root) environment for you to work with out of the box.<br>
+A screenshot of the default Anaconda Navigator configuration of your base environment.
+</p>
+
+<p>
+The Anaconda Navigator interface showing you the packages installed on the base (root) environment.<br>
+From here you can select the environment you want to run. You can also directly run bash commands from the Terminal.
+</p>
+
+<p>
+Directly open Terminal with our without Python via Anaconda Navigator.
+</p>
+
+<p>
+There are a lot of packages already installed for you, but what if you want to install new packages? Or maybe you want to install different packages for different versions of Python? This is why you want to work with environments. Notice in the screenshot above I’ve already set up an environment like this called python37.<br>
+Click on Create and configure a new Python environment.<br>
+Select the latest version of Python and confirm by clicking on Create again.
+</p>
+
+<p>
+Anaconda serves R purposes too, but we’ll use Python in this case.
+</p>
+
+<p>
+It will take a couple of seconds before the environment is configured. In a couple of minutes you’ll notice a new environment is available with a handful of default packages installed. Once you have set up your Python environment, you’ll mostly use the Terminal for installing packages on the go (which I’ll show you later on) and you will probably use the Anaconda Navigator less.<br>
+Great! Essentially, this is al you need to start to start using Python on your machine with Anaconda. Now all we need is a workspace to actually use our Python environment, so we can run our scripts with our packages. You can use Jupyter Notebook which comes with Anaconda, but I like to use VS Code and I’ll explain shortly why.
+</p>
+
+<h3>Creating your Data Science workspace in VS Code</h3>
+
+<br>
+
+<p>
+Visual Studio Code is a free code editor that you can tailer to your needs. Using packages like the Python Extension for VS Code, GitHub and other useful packages, it’s a lightweight IDE that provides excellent support for running Python in your own custom workspace. In the previous chapter we’ve set up Anaconda and installed VS code.<br>
+Open VS Code.
+</p>
+
+<p>
+The welcome screen on your first start of Visual Studio Code.
+</p>
+
+<p>
+Visual Studio Code is a powerful, lightweight code editor that lets you configure your own workspaces for each of your projects. I’ve created a dummy folder called DataScienceProject for testing purposes.
+</p>
+
+<p>
+Click on Open Folder and select the folder.
+</p>
+
+<p>
+Go to the menu and select File &gt; Save Workspace as
+</p>
+
+<p>
+Save your Workspace-file within the folder
+</p>
+
+<p>
+You now have set up a custom Workspace in VS Code. The great thing about a Workspace, is that you can customize the settings for each individual Workspace.
+</p>
+
+<p>
+Now, create a new file called helloworld.py within your Workspace.
+</p>
+
+<p>
+Open helloworld.py.
+</p>
+
+<p>
+Copy the code below into your file and save it.<br>
+#%%<br>
+# This is the first cell of our Python code<br>
+print('Hello world!')<br>
+#%%<br>
+# This is another cell<br>
+print('Another cell for the world to see!')
+</p>
+
+<p>
+Around this time you might get all sorts of messages like ‘Pylint package not installed’, upon opening your file. This is because VS Code will automatically recognize you are editing a Python file. We’ll get into packages in a bit, but first let’s see if we can run that Python file of ours. You can run it directly in the Terminal or from the Interactive Python Window. The Interactive Python Window is extremely useful, since it gives you more feedback on debugging your code, but also allows you to run different bits of codes called cells in your Python script.
+</p>
+
+<p>
+To run your script, press shift-enter. You can also right-click the file and select ‘Run Python File in Terminal’ or ‘Run Python File in Interactive Python Window’.<br>
+After running your first script, your should see the Interactive Python Window on the right of your code and return something like this.<br>
+[1] # This is the first cell of our Python code...<br>
+Hello world!<br>
+[2] # This is another cell...<br>
+Another cell for the world to see!
+</p>
+
+<p>
+Congratulations! You’ve just set up a Workspace in Visual Studio Code to run Python projects! Now let’s dig a little deeper and see if we can install new packages into our environment.
+</p>
+
+<h3>Managing packages from within your Terminal</h3>
+
+<br>
+
+<p>
+Now that we ran our first script, you might want to add a new package. Let’s say your project requires you to connect to one of the Google API’s. Google provides us with a package to do this, but these are not installed in your default environment. Luckily, there are a lot of packages available to us. Anaconda has its own package repository and there are many more repositories for us to find our packages. The package we are looking for in our example is the Google API Python Client. Go ahead and follow these steps.
+</p>
+
+<p>
+Open the Terminal. Make sure you are working in your base environment. The Terminal should tell us so by showing you something like this:<br>
+(base) myMac:DataScienceProject myUser$
+</p>
+
+<p>
+Check whether the package already is installed by entering the following command in the Terminal:
+</p>
+
+<p>
+conda list
+</p>
+
+<p>
+This will return a list of packages that are currently installed in your base (root) environment. Now install the package by running the following command into your Terminal:
+</p>
+
+<p>
+conda install -c conda-forge google-api-python-client 
+</p>
+
+<p>
+The package will now be installed on your base environment. If all goes well, you should see the following message in your Terminal. I didn’t copy all of the message, but this should give you an idea.
+</p>
+
+<p>
+Collecting package metadata (current_repodata.json): done<br>
+Solving environment: done<br>
+## Package Plan ##<br>
+environment location: /Users/myUser/anaconda3<br>
+added / updated specs:<br>
+<div style='padding-left: 30pt'>
+- google-api-python-client
+</div>
+The following packages will be downloaded<br>
+...<br>
+...<br>
+...<br>
+Proceed ([y]/n)? y<br>
+...<br>
+Preparing transaction: done<br>
+Verifying transaction: done<br>
+Executing transaction: done
+</p>
+
+<p>
+Awesome! We’ve successfully installed a new package within our environment. This will allow you to import the package libraries and use the Google API Python Client from within your scripts.<br>
+But what if you already have package running in the base environment and you don’t want to risk messing up your current environment settings? You can use a new environment and install different packages for that environment as well. We now know how to install a package, but let me show you how to change your Python environment from within VS code as well.<br>
+Managing your Python environments from within your Workspace
+</p>
+
+<p>
+Besides from working in your own custom Workspace, you can manage your Anaconda environment from within the editor itself. This way you don’t have to run Anaconda Navigator over and over again, but simply run a Python environment straight out of the editor so you can keep on coding.<br>
+Have you noticed the blue bar in the bottom of the editor? This bar gives you information on the code you’re working on. On the far left of the bar, you see the interpreter you are currently using. In my case it uses:
+</p>
+
+<p>
+Python 3.7.3 64-bit ('base':conda)
+</p>
+
+<p>
+As you can figure, I’m running Python 3.7.3 in the base (root) environment from Anaconda. It also shows you if there are any problems in your code, how many lines, columns, spaces there are, which encoding you currently have selected and which language your are programming in.<br>
+By clicking on the interpreter you can select other interpreters. For example, the Python environment we’ve created earlier in Anaconda.<br>
+Click on your interpreter and select the interpreter we created earlier.
+</p>
+
+<h4>How to select a different Python interpreter.</h4>
+
+<p>
+Now, when you switch from your Base-interpreter to a new interpreter, sometimes the Jupyter-server has trouble starting. The Jupyter-server runs on a kernel which is somewhat of an engine for your Python environment. The Jupyter-kernel is vital to running your code inside VS Code, especially running code in the Interactive Python Window. If you happen to get these errors, try the following in the Terminal:
+</p>
+
+<h5>For macOS:</h5>
+
+<br>
+
+<p>
+source activate &lt;environmentnamehere&gt;<br>
+pip install ipykernel<br>
+python -m ipykernel install --user
+</p>
+
+<h5>For Windows:</h5>
+
+<br>
+
+<p>
+activate &lt;environmentnamehere&gt;<br>
+pip install ipykernel<br>
+python -m ipykernel install --user
+</p>
+
+<p>
+This will install a kernel within your environment specifically. Restart your VS Code editor and try running your code in the newly selected interpreter (python37:conda).<br>
+If all goes well, then congratulations are in order! You’ve successfully set up your own Workspace in Visual Studio Code which you can now use for your Python projects!
+</p>
+
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+		<b>Backlinks:</b>
+
+		<a href='#CS notes'>CS notes</a>
+
+		<br /><br />
+
+	</div>
+
+	
+
+</div>
+
+</body>
+</html>
